@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>heixiu-j</title><meta name="author" content="heixiu-j"><meta name="copyright" content="heixiu-j"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="heixiu-j">
+<meta property="og:url" content="https://heixiu-j.github.io/index.html">
+<meta property="og:site_name" content="heixiu-j">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://heixiu-j.github.io/img/xiaohei.jpg">
+<meta property="article:author" content="heixiu-j">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://heixiu-j.github.io/img/xiaohei.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "heixiu-j",
+  "alternateName": [
+    "heixiu-j.github.io"
+  ],
+  "url": "https://heixiu-j.github.io/"
+}</script><link rel="shortcut icon" href="/img/xiaohei.jpg"><link rel="canonical" href="https://heixiu-j.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繄1�7","msgToSimplifiedChinese":"簄1�7"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'heixiu-j',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/forest.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/xiaohei.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/sanrenzu.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">heixiu-j</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">heixiu-j</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/heixiu-j" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:862246136@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/19/computer/%E9%85%8D%E7%BD%AEphp+apache+mysql/" title="配置php+apache+mysql"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="配置php+apache+mysql"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/19/computer/%E9%85%8D%E7%BD%AEphp+apache+mysql/" title="配置php+apache+mysql">配置php+apache+mysql</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-19T13:58:49.000Z" title="发表于 2026-04-19 21:58:49">2026-04-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/computer/">computer</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/php/">php</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/apache/">apache</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/mysql/">mysql</a></span></div><div class="content">安装MySQLhttps://blog.51cto.com/aiilive/2116476 (安装) Mysql超详细安装配置教程(保姆级)_mysql下载安装教程-CSDN博客(主要这个)  教你彻底卸载MySQL 并重装（保姆级教程 ）_mysql怎么卸载干净重装-CSDN博客 主要参考以上文章（之前安装过MySQL但是没用过，忘了一些配置了） 我的MySQL服务名是MySQL80 MySQL相关服务 12345678#启动mysql服务net start mysql#关闭mysqlnet stop mysql#移除mysql服务mysqld --remove  ApacheApache HTTP Server 下载，安装，配置，启动手把手教你_阿帕奇安装-CSDN博客 参考这篇文章 一些Apache服务命令 1234567启动服务：httpd -k star停止服务：httpd -k stop重启服务：httpd -k restart卸载：httpd -k uninstall测试：httpd -t版本信息：httpd -V查看cmd命令：httpd -h  修改apache...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/15/Algorithm/ACM%E6%A8%A1%E5%BC%8F/" title="ACM模式"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ACM模式"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/15/Algorithm/ACM%E6%A8%A1%E5%BC%8F/" title="ACM模式">ACM模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-15T05:08:50.627Z" title="发表于 2026-04-15 13:08:50">2026-04-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Algorithm/">Algorithm</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Algorithm/">Algorithm</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ACM/">ACM</a></span></div><div class="content">ACM模式输入输出自行处理输入输出的模式 固定式输入分析C++的cin输入会自动跳过空格，换行（肉眼看数据之间存在的间隔） 123456int n;cin &gt;&gt; n;int arr[1000];for(int i=0;i&lt;n;i++)&#123;    cin &gt;&gt; a[i];&#125;  Java的Scanner和cpp的cin类似，但需再次nextlnt，指明输入类型 123456int n;n = in.nextInt()int[] arr = new int[n];for(int i=0;i&lt;n;i++)&#123;    arr[i] = in.nextInt();&#125;  不定式输入一行内数量不确定C++的cin自动判断EOF 123456int x,len = 0;int data[1000]while(cin&gt;&gt;x)&#123;    data[len] = x;    len++;&#125;  Java中的Scanner.hasNex系列函数可判断EOF 12345678Scanner in = new ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/12/computer/%E7%94%A8docker%E8%B5%B7%E4%B8%80%E4%B8%AAphp+apache+mysql%E7%9A%84%E5%AE%B9%E5%99%A8/" title="用docker起一个php+apache+mysql的容器"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用docker起一个php+apache+mysql的容器"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/12/computer/%E7%94%A8docker%E8%B5%B7%E4%B8%80%E4%B8%AAphp+apache+mysql%E7%9A%84%E5%AE%B9%E5%99%A8/" title="用docker起一个php+apache+mysql的容器">用docker起一个php+apache+mysql的容器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-12T10:47:14.000Z" title="发表于 2026-04-12 18:47:14">2026-04-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/computer/">computer</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/docker/">docker</a></span></div><div class="content">基本工作流12345678910111213# 1. 编写配置文件docker-compose.ymldockerfile# 2. 启动服务（后台运行）docker compose up -d --build  #启动+重新构建（dockerfile代码改了必须buil）docker compose up -d          #更改docker-compose文件后用这个命令就行，不用重新build，但是更改了dockerfile之后需要重新build# 3. 常用管理命令docker compose ps          # 查看状态docker compose logs -f     # 查看日志docker compose restart     # 重启服务docker compose down        # 停止并删除容器、网络（保留数据卷需加 -v）  docker-compose文件1234567891011121314151617181920212223242526272829303132333435363738394041424344454647 se...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/10/computer/docker%E4%BD%BF%E7%94%A8/" title="docker使用"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/10/computer/docker%E4%BD%BF%E7%94%A8/" title="docker使用">docker使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-10T10:47:14.000Z" title="发表于 2026-04-10 18:47:14">2026-04-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/computer/">computer</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/docker/">docker</a></span></div><div class="content">下载镜像 docker pull docker.io/library/nginx:latest  docker.io：仓库地址，官方的可省略 library：命名空间（作者名），官方的可省略 latest：标签（版本号），省略表示下载最新版  docker images：列出所有下载过的docker镜像 docker rmi ID/镜像名字 ：删除镜像 运行容器1234567891011121314docker run 镜像名docker run -d 镜像名  容器日志不会打印在控制台，不会阻塞控制台执行docker ps            查看进程状况，-a查看所有（运行的和停止的）docker run -p 80:80    端口映射 宿主机端口:容器端口-v 宿主机目录:容器目录    挂载卷，容器目录与宿主机目录绑定docker rm 容器名        删除容器-e 环境变量             传入环境变量--name                 自定义名字-it                   让控制台进入容器进行交互--rm          ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/09/Algorithm/%E5%9B%9E%E6%BA%AF/" title="回溯"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="回溯"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/09/Algorithm/%E5%9B%9E%E6%BA%AF/" title="回溯">回溯</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-09T14:20:48.000Z" title="发表于 2026-04-09 22:20:48">2026-04-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Algorithm/">Algorithm</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Algorithm/">Algorithm</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9B%9E%E6%BA%AF/">回溯</a></span></div><div class="content">回溯组合问题（力扣77）回溯三部曲  递归函数的参数和返回值  确定递归的终止条件  单层递归逻辑   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455//一维数组存组合，二维数组存所有组合/** * Return an array of arrays of size *returnSize. * The sizes of the arrays are returned as *returnColumnSizes array. * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free(). */int *path;int pathTop;int **ans;int ansTop;void backtracking(int n,int k,int startIndex)&#123;    if(path...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/08/ctf/SQL%E6%B3%A8%E5%85%A5/" title="SQL注入"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SQL注入"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/08/ctf/SQL%E6%B3%A8%E5%85%A5/" title="SQL注入">SQL注入</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-08T14:28:33.000Z" title="发表于 2026-04-08 22:28:33">2026-04-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ctf/">ctf</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ctf/">ctf</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/web/">web</a></span></div><div class="content"> 是记录自己学习的笔记  环境搭建Windows 安装小皮（phpstudy） 下载靶场压缩包（sqli-labs）,复制到phpstudy网站根目录下解压缩(可以修改文件夹名字) 启动Apache和MySQL 修改sqli-labs中的db文件（连接数据库的用户名和密码）  12345678&lt;?php//give your mysql connection username n password$dbuser =&#x27;root&#x27;;$dbpass =&#x27;root&#x27;;$dbname =&quot;security&quot;;$host = &#x27;localhost&#x27;;$dbname1 = &quot;challenges&quot;;?&gt;   打开127.0.0.1/靶场文件夹名字  mysql数据库语句数据库 数据表 列名（字段名） 具体数据 命令行：&#x3D;&#x3D;数据库语句一定要加分号&#x3D;&#x3D; 增删改123456789101112131415161718192021222324252627...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/08/computer/%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D%E5%BA%94%E7%94%A8/" title="安装各种应用"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装各种应用"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/08/computer/%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D%E5%BA%94%E7%94%A8/" title="安装各种应用">安装各种应用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-08T13:58:49.000Z" title="发表于 2026-04-08 21:58:49">2026-04-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/computer/">computer</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/computer/">computer</a></span></div><div class="content">MySQLhttps://blog.51cto.com/aiilive/2116476 (安装) 教你彻底卸载MySQL 并重装（保姆级教程 ）_mysql怎么卸载干净重装-CSDN博客 服务名：MySQL80 ApacheApache HTTP Server 下载，安装，配置，启动手把手教你_阿帕奇安装-CSDN博客 </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/04/08/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="动态规划"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/08/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">动态规划</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-08T09:02:54.214Z" title="发表于 2026-04-08 17:02:54">2026-04-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Algorithm/">Algorithm</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Algorithm/">Algorithm</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></span></div><div class="content">动态规划&#x3D;&#x3D;最优子系列问题，最优子结构，问最值&#x2F;方案数，问题可递归处理&#x3D;&#x3D; &#x3D;&#x3D;动规五部曲&#x3D;&#x3D;  dp数组的含义 递推公式 dp数组初始化 遍历顺序 打印dp数组（用于检验）  斐波那契（509）123456789101112//递归方法int fib(int n) &#123;    if(n==0)&#123;        return 0;    &#125;    if(n==1)&#123;        return 1;    &#125;    return fib(n-1)+fib(n-2);&#125;//动规方法  爬楼梯（70）123456789101112131415161718192021222324int climbStairs(int n) &#123;    if(n == 1)&#123;        return 1;    &#125;    if(n == 2)&#123;        return 2;    &#125;    return...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/04/07/computer/windows11%E5%AE%9E%E7%8E%B0docker%E5%92%8Cvm%E5%85%B1%E5%AD%98/" title="windows11实现docker和vm共存"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="windows11实现docker和vm共存"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/04/07/computer/windows11%E5%AE%9E%E7%8E%B0docker%E5%92%8Cvm%E5%85%B1%E5%AD%98/" title="windows11实现docker和vm共存">windows11实现docker和vm共存</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-04-07T04:21:55.000Z" title="发表于 2026-04-07 12:21:55">2026-04-07</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/docker/">docker</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/VM/">VM</a></span></div><div class="content"> 是宿主机中的docker、WSL2和VM虚拟机共存  打开windows的虚拟化平台如图所示打开windows的虚拟化平台，重启电脑后生效  关闭虚拟机的虚拟化引擎VMware15.5版本以上已经支持虚拟化平台和虚拟机共存 影响：无法在虚拟机内再嵌套虚拟化（比如在虚拟机里开 Docker、WSL2），日常使用完全无影响  关闭后打开会显示  关闭侧通道缓解 原理：侧通道缓解是为了防御 Spectre&#x2F;Meltdown 等 CPU 侧信道攻击的安全机制，开启后会显著降低虚拟机性能（卡顿、响应慢） 触发原因：你的物理机 Windows 10 开启了 Hyper-V &#x2F; 内核隔离等虚拟化安全功能，VMware 自动启用了该缓解措施  彻底关闭侧通道缓解（提升性能，推荐） 前置要求：必须先完全关闭虚拟机（不能挂起）  选中该 Windows 10 虚拟机，点击菜单栏 「虚拟机 (VM)」→「设置 (Settings)」 在弹出的窗口中，切换到 「选项 (Options)」 标签页找到左侧 「高级 (Advanced)」 选项 在右侧勾选 「不为启用了Hyper-V的...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/03/29/computer/%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E5%90%8D%E4%B8%BA%E8%8B%B1%E6%96%87%E7%94%A8%E6%88%B7%E5%90%8D/" title="更改中文用户名为英文用户名"><img class="post-bg" src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="更改中文用户名为英文用户名"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/03/29/computer/%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E5%90%8D%E4%B8%BA%E8%8B%B1%E6%96%87%E7%94%A8%E6%88%B7%E5%90%8D/" title="更改中文用户名为英文用户名">更改中文用户名为英文用户名</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-03-29T10:47:14.000Z" title="发表于 2026-03-29 18:47:14">2026-03-29</time></span></div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/xiaohei.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">heixiu-j</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/heixiu-j"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/heixiu-j" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:862246136@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/04/19/computer/%E9%85%8D%E7%BD%AEphp+apache+mysql/" title="配置php+apache+mysql"><img src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="配置php+apache+mysql"/></a><div class="content"><a class="title" href="/2026/04/19/computer/%E9%85%8D%E7%BD%AEphp+apache+mysql/" title="配置php+apache+mysql">配置php+apache+mysql</a><time datetime="2026-04-19T13:58:49.000Z" title="发表于 2026-04-19 21:58:49">2026-04-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/15/Algorithm/ACM%E6%A8%A1%E5%BC%8F/" title="ACM模式"><img src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ACM模式"/></a><div class="content"><a class="title" href="/2026/04/15/Algorithm/ACM%E6%A8%A1%E5%BC%8F/" title="ACM模式">ACM模式</a><time datetime="2026-04-15T05:08:50.627Z" title="发表于 2026-04-15 13:08:50">2026-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/12/computer/%E7%94%A8docker%E8%B5%B7%E4%B8%80%E4%B8%AAphp+apache+mysql%E7%9A%84%E5%AE%B9%E5%99%A8/" title="用docker起一个php+apache+mysql的容器"><img src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用docker起一个php+apache+mysql的容器"/></a><div class="content"><a class="title" href="/2026/04/12/computer/%E7%94%A8docker%E8%B5%B7%E4%B8%80%E4%B8%AAphp+apache+mysql%E7%9A%84%E5%AE%B9%E5%99%A8/" title="用docker起一个php+apache+mysql的容器">用docker起一个php+apache+mysql的容器</a><time datetime="2026-04-12T10:47:14.000Z" title="发表于 2026-04-12 18:47:14">2026-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/10/computer/docker%E4%BD%BF%E7%94%A8/" title="docker使用"><img src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker使用"/></a><div class="content"><a class="title" href="/2026/04/10/computer/docker%E4%BD%BF%E7%94%A8/" title="docker使用">docker使用</a><time datetime="2026-04-10T10:47:14.000Z" title="发表于 2026-04-10 18:47:14">2026-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/09/Algorithm/%E5%9B%9E%E6%BA%AF/" title="回溯"><img src="/img/xiaoheibizhi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="回溯"/></a><div class="content"><a class="title" href="/2026/04/09/Algorithm/%E5%9B%9E%E6%BA%AF/" title="回溯">回溯</a><time datetime="2026-04-09T14:20:48.000Z" title="发表于 2026-04-09 22:20:48">2026-04-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Algorithm/"><span class="card-category-list-name">Algorithm</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/computer/"><span class="card-category-list-name">computer</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ctf/"><span class="card-category-list-name">ctf</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Algorithm/" style="font-size: 1.45em; color: rgb(50, 172, 85);">Algorithm</a><a href="/tags/ACM/" style="font-size: 1.15em; color: rgb(157, 50, 77);">ACM</a><a href="/tags/%E5%9B%9E%E6%BA%AF/" style="font-size: 1.15em; color: rgb(50, 137, 160);">回溯</a><a href="/tags/docker/" style="font-size: 1.45em; color: rgb(101, 50, 135);">docker</a><a href="/tags/VM/" style="font-size: 1.15em; color: rgb(114, 85, 50);">VM</a><a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.15em; color: rgb(65, 153, 50);">动态规划</a><a href="/tags/computer/" style="font-size: 1.3em; color: rgb(50, 164, 199);">computer</a><a href="/tags/ctf/" style="font-size: 1.15em; color: rgb(146, 114, 134);">ctf</a><a href="/tags/web/" style="font-size: 1.15em; color: rgb(65, 165, 50);">web</a><a href="/tags/php/" style="font-size: 1.15em; color: rgb(69, 186, 89);">php</a><a href="/tags/apache/" style="font-size: 1.15em; color: rgb(101, 50, 184);">apache</a><a href="/tags/mysql/" style="font-size: 1.15em; color: rgb(91, 184, 50);">mysql</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/04/">
+            <span class="card-archive-list-date">
+              四月 2026
+            </span>
+            <span class="card-archive-list-count">9</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-22T15:49:47.966Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/sanrenzu.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By heixiu-j</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繄1�7</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="/js/tw_cn.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
